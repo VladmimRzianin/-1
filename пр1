@@ -1,0 +1,32 @@
+start:
+
+string simb;
+
+Console.WriteLine("ввести первое число");
+double x = Convert.ToDouble(Console.ReadLine());
+
+
+Console.WriteLine("ввести действие");
+simb = Convert.ToString(Console.ReadLine());
+
+Console.WriteLine("ввести второе число");
+double y = Convert.ToDouble(Console.ReadLine());
+
+switch (simb)
+{
+	case "+":
+		Console.WriteLine(x + y);
+		goto start;
+	case "-":
+		Console.WriteLine(x - y);
+		goto start;
+	case "*":
+			Console.WriteLine(x * y);
+		goto start;
+	case "/":
+			Console.WriteLine(x / y);
+		goto start;
+	default:
+		Console.WriteLine("Вы не ввели действие");
+		goto start;
+}
